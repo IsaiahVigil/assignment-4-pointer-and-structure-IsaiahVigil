@@ -15,12 +15,12 @@ int main(int argc, char *argv[]) {
     int size = 5;
     Item *item_list = (Item *)malloc(size * sizeof(Item));
     if (!item_list) {
-        fprintf(stderr, "Memory allocation failed!\n");
+        fprintf(stderr, "Memory allocation failed\n");
         return 1;
     }
 
     // Add 
-    add_item(item_list, 2.50, "19282", "breakfast", "Reese", 0);
+    add_item(item_list, 2.50, "19282", "candy", "Reese", 0);
     add_item(item_list, 3.95, "79862", "dairy", "Milk", 1);
     add_item(item_list, 2.50, "12456", "snacks", "Doritos", 2);
     add_item(item_list, 2.89, "44567", "beverage", "Dr. Pepper", 3);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
     print_items(item_list, size);
 
     // Calc and print avg price
-    printf("Average price of items = %.6f\n", average_price(item_list, size));
+    printf("Avg price of items = %.6f\n", average_price(item_list, size));
 
     if (argc == 2) {
         printf("\nSearching for SKU: %s\n", argv[1]);
