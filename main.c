@@ -20,11 +20,11 @@ int main(int argc, char *argv[]) {
     }
 
     // Add 
-    add_item(item_list, 5.00, "19282", "breakfast", "reese's cereal", 0);
-    add_item(item_list, 3.95, "79862", "dairy", "milk", 1);
-    add_item(item_list, 2.50, "12456", "snacks", "chips", 2);
-    add_item(item_list, 6.75, "98765", "meat", "steak", 3);
-    add_item(item_list, 4.25, "54321", "produce", "apples", 4);
+    add_item(item_list, 2.50, "19282", "candy", "Reese", 0);
+    add_item(item_list, 3.95, "79862", "dairy", "Milk", 1);
+    add_item(item_list, 2.50, "12456", "snacks", "Doritos", 2);
+    add_item(item_list, 2.89, "44567", "beverage", "Dr. Pepper", 3);
+    add_item(item_list, 4.25, "54321", "produce", "Apples", 4);
 
     // Print 
     print_items(item_list, size);
@@ -86,9 +86,12 @@ void print_items(Item *item_list, int size) {
 
 void search_item(Item *item_list, int size, char *sku) {
     int ct = 0;
+
+    // Loop until match or end
     while (ct < size && strcmp(item_list[ct].sku, sku) != 0) {
         ct++;
     }
+
     if (ct < size) {
         printf("Item found:\n");
         printf("item name = %s\n", item_list[ct].name);
