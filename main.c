@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
     }
 
     // Add 
-    add_item(item_list, 2.50, "19282", "candy", "Reese", 0);
+    add_item(item_list, 2.50, "19282", "breakfast", "Reese", 0);
     add_item(item_list, 3.95, "79862", "dairy", "Milk", 1);
     add_item(item_list, 2.50, "12456", "snacks", "Doritos", 2);
     add_item(item_list, 2.89, "44567", "beverage", "Dr. Pepper", 3);
@@ -102,3 +102,4 @@ void search_item(Item *item_list, int size, char *sku) {
         printf("Item not found.\n");
     }
 }
+
